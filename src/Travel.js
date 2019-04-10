@@ -1,15 +1,15 @@
 
-import React from 'react';
+import React from "react";
 
-const Travel = ({destination, country, image, distance}) => (
-      <figcaption>
-      <img src={image} alt={country}/>
-        <blockquote>
-        {destination}
-        <h1>{country}</h1>
-        <h3>{distance}</h3>
-        </blockquote>
-      </figcaption>
-    
-  );
+const Travel = props => (
+  <figure>
+    <img src={props.image} alt={props.character} />
+    <figcaption>
+      <blockquote>{props.destination}</blockquote>
+      <p>{props.country}</p>
+      <p>{props.distance}</p>
+    </figcaption>
+  </figure>
+);
+
 export default Travel;
